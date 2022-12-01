@@ -4,6 +4,7 @@ import './App.css';
 import Navbar from './componentes/static/navbar/navbar';
 import { Home } from './componentes/paginas/Home/home';
 import { Postagens } from './componentes/postagens/postagens';
+import { Footer } from './componentes/static/footer/Footer';
 
 function App() {
   return (
@@ -14,8 +15,11 @@ function App() {
         <Route path='/home' element={<Home />}/>
         <Route path='/inicio' element={<Home />}/>
         <Route path='/postagens' element={<Postagens />}/>
+
         
       </Routes>
+
+      <Footer/>
     </Router>
   )
 }
