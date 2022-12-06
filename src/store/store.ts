@@ -1,7 +1,6 @@
-import {createStore} from "redux"; 
-import {clicksReducer} from "./clicks/clicksReducer"
+import {createStore} from 'redux';
+import { tokenReducer } from './tokens/tokensReducer';
 
-const store = createStore(clicksReducer)
+const store = createStore(tokenReducer);
 
-
-export {store}; 
+export default store;
