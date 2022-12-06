@@ -1,0 +1,23 @@
+# Passo a passo do redux
+
+1- criar a Action 
+
+1.1 -criar o type da Action 
+
+1.2- criar a função que retorna a Action
+
+2- Criar o reducer 
+
+2.1 - Criar o Type de retorno do reducer
+
+2.2 - Criar o estado inicial do reducer 
+
+2.3 - Criar a função que valida e modifica ou nao o estado 
+
+3- Criar a Store 
+
+4- importar a Store
+
+no home (onde onde eu quiser)
+
+5.1 

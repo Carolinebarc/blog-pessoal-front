@@ -1,6 +1,6 @@
 import { Box, Button, Grid, Typography } from "@material-ui/core";
 import React, { useState } from "react";
-import './home.css';
+import './Home.css';
 
 function Home(){
   return (

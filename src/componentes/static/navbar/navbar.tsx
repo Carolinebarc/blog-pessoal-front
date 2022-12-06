@@ -8,7 +8,7 @@ import { createStyles, alpha, Theme, makeStyles } from '@material-ui/core/styles
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import { Button } from '@material-ui/core';
-import './navbar.css' ;
+import './Navbar.css' ;
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -72,7 +72,7 @@ export default function Navbar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="secondary">
+      <AppBar position="static" color="primary">
         <Toolbar>
           <IconButton
             edge="start"
@@ -87,6 +87,7 @@ export default function Navbar() {
           </Typography>
           <Button  id='botao_nav' href='/home'>Home</Button>
           <Button id='botao_nav' href='/postagens'>Postagens</Button>
+          <Button id='botao_nav' href='/login'>Login</Button>
 
           <div className={classes.search}>
             <div className={classes.searchIcon}>

@@ -1,10 +1,11 @@
-import { Box, Grid, Typography } from "@material-ui/core";
-import React from "react";
+import { Box, Button, Grid, Typography } from "@material-ui/core";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { clicksState } from "../../store/clicks/clicksReducer";
 import './postagens.css';
 
 function Postagens(){
-  return (
-      <>
+
           <Grid container direction="row" justifyContent="center" alignItems="center" className='caixa'>
               <Grid alignItems="center" item xs={6}>
                   
@@ -20,8 +21,7 @@ function Postagens(){
               </Grid>
 
           </Grid>
-      </>
-  )
+    
 }
 
 export { Postagens };

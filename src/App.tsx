@@ -1,27 +1,35 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.css';
-import Navbar from './componentes/static/navbar/navbar';
-import { Home } from './componentes/paginas/Home/home';
-import { Postagens } from './componentes/postagens/postagens';
+import Navbar from './componentes/static/navbar/Navbar';
 import { Footer } from './componentes/static/footer/Footer';
+import { Home } from './componentes/paginas/home/Home';
+import './App.css';
+import Login from './componentes/paginas/login/Login';
+import CadastroUsuario from './componentes/paginas/cadUsuario/CadastroUsuario';
+import { Provider } from 'react-redux';
+import { store } from './store/store';
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path='/' element={<Home />}/>
-        <Route path='/home' element={<Home />}/>
-        <Route path='/inicio' element={<Home />}/>
-        <Route path='/postagens' element={<Postagens />}/>
+    <Provider store={store} >
+      <Router>
+        <Navbar />
+        <Routes>
 
-        
-      </Routes>
+          <Route path="/" element={<Login />} />
 
-      <Footer/>
-    </Router>
-  )
+          <Route path="/home" element={<Home />} />
+
+          <Route path="/login" element={<Login />} />
+
+          <Route path="/CadastroUsuario" element={<CadastroUsuario />} />
+
+        </Routes>
+        <Footer/>
+      </Router>
+    </Provider>
+
+  );
 }
 
 export default App;
