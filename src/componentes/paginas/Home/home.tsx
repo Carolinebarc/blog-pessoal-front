@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 import {Typography, Box, Grid, Button} from '@material-ui/core';
-import TabPostagem from '../../components/postagens/tabpostagens/TabPostagem';
-import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
+import TabPostagem from '../../postagens/tabpostagens/TabPostagem';
+import ModalPostagem from '../../postagens/modalPostagem/ModalPostagem';
 import './Home.css';
 import { useNavigate } from 'react-router';
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../store/tokens/tokensReducer';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 import { Link } from 'react-router-dom';
 
-function Home() {
+function Home () {
 
     let navigate = useNavigate();
     const token = useSelector<TokenState, TokenState["tokens"]>(
@@ -40,7 +40,7 @@ function Home() {
                     </Box>
                 </Grid>
                 <Grid item xs={6} >
-                    <img src="https://i.imgur.com/H88yIo2.png" alt="" width="500px" height="500px" />
+                    <img src="https://www.f15digital.com.br/wp-content/uploads/2022/08/Os-10-mandamentos-do-marketing-pessoal.jpg" alt="" width="500px" height="500px" />
                 </Grid>
                 <Grid xs={12} className='postagens'>
                     <TabPostagem />

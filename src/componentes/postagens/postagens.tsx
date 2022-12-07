@@ -1,7 +1,6 @@
 import { Box, Button, Grid, Typography } from "@material-ui/core";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { clicksState } from "../../store/clicks/clicksReducer";
 import './postagens.css';
 
 function Postagens(){

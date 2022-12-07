@@ -1,11 +1,16 @@
 import React, { useState, useEffect, ChangeEvent } from 'react';
 import { Grid, Box, Typography, TextField, Button } from '@material-ui/core';
 import { Link, useNavigate } from 'react-router-dom';
-import { login } from '../../services/Service';
 import UserLogin from '../../models/UserLogin';
 import './Login.css';
 import { useDispatch } from 'react-redux';
-import { addToken } from "../../store/tokens/actions";
+import { addToken } from '../../../store/tokens/actions';
+import { login } from '../../../services/Service';
+import NoEncryptionIcon from '@mui/icons-material/NoEncryption';
+import { NoEncryption } from '@material-ui/icons';
+
+
+
 
 function Login() {
     let navigate = useNavigate();
@@ -49,14 +54,17 @@ function Login() {
     return (
         <Grid container direction='row' justifyContent='center' alignItems='center'>
             <Grid alignItems='center' xs={6}>
-                <Box paddingX={20}>
+                <Box paddingX={20}>  
                     <form onSubmit={onSubmit}>
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos1'>Entrar</Typography>
                         <TextField value={userLogin.usuario} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='usuário' variant='outlined' name='usuario' margin='normal' fullWidth />
-                        <TextField value={userLogin.senha} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='senha' variant='outlined' name='senha' margin='normal' type='password'fullWidth />
+                    
+                        <TextField  value={userLogin.senha} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='senha ' variant='outlined' name='senha' margin='normal' type='password'fullWidth />
                         <Box marginTop={2} textAlign='center'>
+                           
+
                                 <Button type='submit' variant='contained' color='primary'>
-                                    Logar
+                                    Logar   
                                 </Button>
                         </Box>
                     </form>
