@@ -9,6 +9,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import { Button } from '@material-ui/core';
 import './Navbar.css' ;
+import HomeSharpIcon from '@mui/icons-material/HomeSharp';
+import LoginSharpIcon from '@mui/icons-material/LoginSharp';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -80,14 +82,15 @@ export default function Navbar() {
             color="inherit"
             aria-label="open drawer"
           >
-            <MenuIcon />
+            <MenuIcon/>
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            Caroline Barcelos
+           Blog Pessoal Caroline Barcelos 
           </Typography>
-          <Button  id='botao_nav' href='/home'>Home</Button>
+          <Button  id='botao_nav' href='/home'><HomeSharpIcon/>
+          </Button>
           <Button id='botao_nav' href='/postagens'>Postagens</Button>
-          <Button id='botao_nav' href='/login'>Login</Button>
+          <Button id='botao_nav' href='/login'><LoginSharpIcon/></Button>
 
           <div className={classes.search}>
             <div className={classes.searchIcon}>
